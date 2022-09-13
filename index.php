@@ -164,8 +164,8 @@
                                         </center></address>
                                 </div>	
 					<div class="usa-footer-logo">
-						<a href="https://www.usa.gov/"><img alt="Logo image" class="usa-footer-logo-img" src="USAGOV.png" title="USA Logo"></a>
-						<a href="http://www.noaa.gov/"><img alt="Logo image" class="usa-footer-logo-img" src="noaa_logo.png" title="NOAA EMC Logo"></a>
+						<a href="https://www.usa.gov/"><img alt="Logo image" class="usa-footer-logo-img" src="style/images/usagov.png" title="USA Logo"></a>
+						<a href="http://www.noaa.gov/"><img alt="Logo image" class="usa-footer-logo-img" src="style/images/noaa_logo.png" title="NOAA EMC Logo"></a>
 						<h3 class="usa-footer-logo-heading">National Centers for<br>Environmental Prediction/<br>Environmental Modeling Center</h3>
 
 					</div>
