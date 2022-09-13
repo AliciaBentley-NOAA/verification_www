@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en">
-<title> EMC Verification </title>
+<title> Global Models </title>
 <head>
 <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -20,23 +20,15 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
 	
-	<!--<link rel="stylesheet" href="style/emc.css" media="all">-->
-	<link rel="stylesheet" href="style/emc-footer.css" media="all">
-	<link rel="stylesheet" href="style/verif_update.css" media="all">
-
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-1Q8X1CSGJP"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-1Q8X1CSGJP');
-</script>
+	<!--<link rel="stylesheet" href="emc.css" media="all">-->
+	<link rel="stylesheet" href="../style/emc-footer.css" media="all">
+	<link rel="stylesheet" href="../style/verification.css" media="all">
+	<link rel="stylesheet" href="../style/custom.css" media="all">
 </head>
 
 <body>
-<!-- <div class="wrapper"> -->
+<div class="wrapper">
+
 <header >
 <nav class="navbar navbar-expand-lg header">
   <a class="navbar-brand noaa-header-logo-img" aria-label="NOAA Home" href="https://www.noaa.gov">
@@ -50,15 +42,16 @@
 		<path fill="#FFFFFF" d="M171.084,152.485h-3.55c-0.682,0-1.234,0.558-1.234,1.238v0.008v6.819c0,0.68,0.552,1.238,1.234,1.238h0  h3.549c0.682,0,1.234-0.558,1.234-1.238v-0.008v-6.819C172.319,153.043,171.766,152.485,171.084,152.485z M170.31,159.618  c0,0.168-0.138,0.306-0.306,0.306h-1.388c-0.169,0-0.306-0.138-0.306-0.306v-4.962c0-0.168,0.138-0.313,0.306-0.313h1.388  c0.169,0,0.306,0.145,0.306,0.313V159.618z"/>
 	</svg>
   </a>
+  
   <button class="navbar-toggler header-toggle-button" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"><i class="fa fa-navicon"></i></span>
   </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-	  <li class="current-nav-item"><a class="nav-link" href="">EMC Verification</a></li>
+	  <li class="current-nav-item active"><a class="nav-link" href="../">EMC Verification <span class="sr-only">(current)</span></a></li>
 	  <li class="nav-item"><a class="nav-link" href="https://emc.ncep.noaa.gov/emc/pages/vpppgb-description.php">About Us</a></li>
-	  <li class="nav-item"><a class="nav-link" href="https://www.emc.ncep.noaa.gov/users/meg/home/">Model Evaluation Group</a></li>
+	  <li class="nav-item"><a class="nav-link" href="../../meg/home/">Model Evaluation Group</a></li>
     </ul>
   </div>
 </nav>
@@ -70,82 +63,110 @@
 
 <div class="content-header">
 
-        <div class="row justify-content-md-left">
-                <div class="col-lg-auto col-breadcrumb-box">
-                        <nav aria-label="breadcrumb">
-                          <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="https://www.emc.ncep.noaa.gov">EMC Home</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">EMC Verification</li>
-                          </ol>
-                        </nav>
-                </div>
-        </div> <!-- End of row -->
-</div>
+	<div class="row justify-content-md-left">
+		<div class="col-lg-auto col-breadcrumb-box">
+			<nav aria-label="breadcrumb">
+			  <ol class="breadcrumb">
+				<li class="breadcrumb-item"><a href="https://www.emc.ncep.noaa.gov">EMC Home</a></li>
+				<li class="breadcrumb-item"><a href="../">EMC Verification</a></li>
+				<li class="breadcrumb-item active" aria-current="page">Global Models</li>
+			  </ol>
+			</nav>
+		</div>
+	</div> <!-- End of row -->	
 
+	<div class="row justify-content-md-center">	
+		<div class="col-lg-auto col-md-auto col-sm-auto col-xs-auto col-page-title">
+			<div class="content-title"><h1>Global Models</h1></div>
+		</div>
+		
+		<div class="col-md-auto">
+			<div class="pos-f-t">
+				<!--Navbar-->
+				<nav class="navbar">
+				  <!-- Collapse button -->
+				  <button class="navbar-toggler third-button" type="button" data-toggle="collapse" data-target="#navbarSupportedContent22"
+					aria-controls="navbarSupportedContent22" aria-expanded="false" aria-label="Toggle navigation">
+					<div class="animated-icon3"><span></span><span></span><span></span></div>
+				  </button>
+				</nav>
+				<!--/.Navbar-->
+
+				  <!-- Collapsible content -->
+				  <div class="collapse detail-page-collapse" id="navbarSupportedContent22">
+					
+						<!-- Links -->
+						<ul class="navbar-nav mr-auto">
+                                                  <li class="nav-item">
+                                                        <a class="nav-link" href="../headlines/">Headline Scores</a>
+                                                  </li>
+						  <li class="nav-item active">
+							<a class="nav-link" href="./">Global Models <span class="sr-only">(current)</span></a>
+						  </li>
+						  <li class="nav-item">
+							<a class="nav-link" href="../regional/">Regional/Hi-Res Models</a>
+						  </li>
+						  <li class="nav-item">
+							<a class="nav-link" href="../ocean_wave/">Ocean/Wave Models</a>
+						  </li>
+						  <li class="nav-item">
+							<a class="nav-link" href="../analyses/">Real-time Analyses</a>
+						  </li>
+						  <li class="nav-item">
+							<a class="nav-link" href="../cyclones/">Cyclones</a>
+						  </li>
+						  <li class="nav-item">
+							<a class="nav-link" href="../precip/">Precipitation/Clouds</a>
+						  </li>
+						  <li class="nav-item">
+							<a class="nav-link" href="../air_quality/">Air Quality</a>
+						  </li>
+						</ul>
+						<!-- Links -->
+				  </div><!-- Collapsible content -->
+			</div><!-- pos-f-t content -->
+			
+		</div> <!-- close col -->
+
+	</div> <!-- End of row -->	
+</div> <!-- End of Content Header -->
+
+<!--<div class="global-hamburger-btn">
+
+</div>-->
 
 <div class="row justify-content-md-center">
     <div class="col-md-auto col-overlay-img">
-                <a class="img" href="headlines/">
-                  <div class="img__overlay">Headline<br/>Scores</div>
-                  <img src="https://emc.ncep.noaa.gov/users/verification/global/gfs/ops/grid2grid_all_models/images/acc_valid00Z_HGT_P500_fhr120_G002NHX.png"/>
-                </a>
-                <div class="img-label"><a class="img-model-icon-lnks" href="headlines/">Headline Scores</a></div>
-        </div>
-    <div class="col-md-auto col-overlay-img">
-		<a class="img" href="global/">
-		  <div class="img__overlay">GFS<br/>GEFS<br/>NAEFS<br/>CFS</div>
-		  <img src="icon/global.png"/>
+		<a class="img" href="gfs/ops/">
+		  <div class="img__overlay">GFS</div>
+		  <img src="https://emc.ncep.noaa.gov/users/verification/global/gfs/ops/grid2grid_all_models/images/acc_valid00Z_HGT_P500_fhr120_G002NHX.png"/>
 		</a>
-		<div class="img-label"><a class="img-model-icon-lnks" href="global/">Global Models</a></div>
+		<div class="img-label"><a class="img-model-icon-lnks" href="gfs/ops/">GFS Verification</a></div>
 	</div>
 	<div class="col-md-auto col-overlay-img">
-		<a class="img" href="regional/">
-		  <div class="img__overlay">NAM<br/>NAM Nest<br>Hi-Res Windows<br>RAP HRRR<br>HREF SREF</div>
-		  <img src="icon/regional_hires.png"/>
+		<a class="img" href="gefs/ops/">
+		  <div class="img__overlay">GEFS</div>
+		  <img src="GEFS_performance_statistics.png"/>
 		</a>
-		<div class="img-label"><a class="img-model-icon-lnks" href="regional/">Regional/Hi-Res Models</a></div>
+		<div class="img-label"><a class="img-model-icon-lnks" href="gefs/ops/">GEFS Verification</a></div>
 	</div>
 	<div class="col-md-auto col-overlay-img">
-		<a class="img" href="ocean_wave/">
-		  <div class="img__overlay">RTOFS<br>WAVEWATCH III</div>
-		  <img src="icon/ocean_wave.png"/>
+		<a class="img" href="naefs/ops/">
+		  <div class="img__overlay">NAEFS</div>
+		  <img src="NAEFS_performance_statistics.png"/>
 		</a>
-		<div class="img-label"><a class="img-model-icon-lnks" href="ocean_wave/">Ocean/Wave Models</a></div>
+		<div class="img-label"><a class="img-model-icon-lnks" href="naefs/ops/">NAEFS Verification</a></div>
 	</div>
 	<div class="col-md-auto col-overlay-img">
-		<a class="img" href="analyses/">
-		  <div class="img__overlay">RTMA<br/>URMA</div>
-		  <img src="icon/realtime_anl.png"/>
+		<a class="img" href="cfs/">
+		  <div class="img__overlay">CFS</div>
+		  <img src="CFS_performance_statistics.png"/>
 		</a>
-		<div class="img-label"><a class="img-model-icon-lnks" href="analyses/">Real-time Analyses</a></div>
-	</div>
-<!--</div>-->
-
-<!-- <div class="row">-->
-<!--<div class="w-100"></div>-->
-
-    <div class="col-md-auto col-overlay-img">
-		<a class="img" href="cyclones/">
-		  <div class="img__overlay">HWRF<br>HMON<br>Tropical Cyclones<br>Extratropical<br>Cyclones</div>
-		  <img src="icon/cyclones.png"/>
-		</a>
-		<div class="img-label"><a class="img-model-icon-lnks" href="cyclones/">Cyclones</a></div>
-	</div>
-	<div class="col-md-auto col-overlay-img">
-		<a class="img" href="precip/">
-		  <div class="img__overlay">Precipitation<br/>Cloud Cover<br>(Multiple Models)</div>
-		  <img src="icon/precip_clouds.png"/>
-		</a>
-		<div class="img-label"><a class="img-model-icon-lnks" href="precip/">Precipitation/Clouds</a></div>
-	</div>
-	<div class="col-md-auto col-overlay-img">
-		<a class="img" href="air_quality/">
-		  <div class="img__overlay">CMAQ<br/>HYSPLIT<br/>NGAC</div>
-		  <img src="icon/air_quality.png"/>
-		</a>
-		<div class="img-label"><a class="img-model-icon-lnks" href="air_quality/">Air Quality</a></div>
+		<div class="img-label"><a class="img-model-icon-lnks" href="cfs/">CFS Verification</a></div>
 	</div>
 </div>
+
+
 
 </div> <!-- Closes Container-Fluid div-->
 </section><!-- Closes Content section-->
@@ -156,67 +177,83 @@
 		
 		<!--<div class="col-lg-12">-->
 		<div class="row">
-			<div class="col-md-6">	
+                        <div class="col-md-6">
                                  <div class="usa-footer-contact-links">
                                         <address><center>
                                                 <div class="usa-footer-contact-heading">Disclaimer:</div>
                                                 <div class="usa-footer-contact-address">This webpage is not operational and is not subject to 24-h monitoring<br>by NCEP's Central Operations (NCO) staff.</div>
                                         </center></address>
-                                </div>	
-					<div class="usa-footer-logo">
-						<a href="https://www.usa.gov/"><img alt="Logo image" class="usa-footer-logo-img" src="style/images/usagov.png" title="USA Logo"></a>
-						<a href="http://www.noaa.gov/"><img alt="Logo image" class="usa-footer-logo-img" src="style/images/noaa_logo.png" title="NOAA EMC Logo"></a>
-						<h3 class="usa-footer-logo-heading">National Centers for<br>Environmental Prediction/<br>Environmental Modeling Center</h3>
+                                </div>
 
-					</div>
-			</div>
-			<div class="col">	
-				<div class="usa-footer-contact-links">
+                                        <div class="usa-footer-logo">	
+					<a href="https://www.usa.gov/"><img alt="Logo image" class="usa-footer-logo-img" src="../style/images/usagov.png" title="USA Logo"></a>
+					<a href="http://www.noaa.gov/"><img alt="Logo image" class="usa-footer-logo-img" src="../style/images/noaa_logo.png" title="NOAA EMC Logo"></a>
+					<h3 class="usa-footer-logo-heading">National Centers for<br>Environmental Prediction/<br>Environmental Modeling Center</h3>
+                                        </div>
+                        </div>
+				
+				<div class="usa-footer-contact-links col">
 					<address>
 						<div class="usa-footer-contact-heading">Contact Us</div>
 						<div class="usa-footer-contact-address">NOAA Center for Weather and Climate Prediction<br>5830 University Research Court<br>College Park, MD 20740</div>
- 						<div class="usa-footer-contact-email">
-						<i class="fa fa-envelope-o" style="padding-right: 6px;"></i><a href="mailto:Alicia.Bentley@noaa.gov">Email Us</a>
+						<div class="usa-footer-contact-email">
+                                                <i class="fa fa-envelope-o" style="padding-right: 6px;"></i><a href="mailto:Alicia.Bentley@noaa.gov">Email Us</a>
 						</div>
 					</address>
 				</div>
-			</div>
-			<div class="col">	
-				<div class="usa-footer-contact-links">
+
+				<div class="usa-footer-contact-links col">
 					<div class="usa-social-links">
 						<div class="usa-footer-contact-heading">Follow Us</div>
-					        <div>
-                                                        <a href="https://www.facebook.com/NOAA-NWS-Environmental-Modeling-Center-151823641556512/" class="fa fa-facebook fa-3x"></a>
-                                                        <a href="https://twitter.com/nwsemc" class="fa fa-twitter fa-3x"></a>
-                                                        <a href="https://www.youtube.com/channel/UCNXpWLqwZTukeycJHyToKKw" class="fa fa-youtube fa-3x"></a>
-                                                </div>
+						<div>
+							<a href="https://www.facebook.com/NOAA-NWS-Environmental-Modeling-Center-151823641556512/" class="fa fa-facebook fa-3x"></a>
+							<a href="https://twitter.com/nwsemc" class="fa fa-twitter fa-3x"></a>
+						        <a href="https://www.youtube.com/channel/UCNXpWLqwZTukeycJHyToKKw" class="fa fa-youtube fa-3x"></a>
+						</div>
 					</div>
 				</div>
-				
-			</div>
+
 		</div>
 		<div class="row">
-			<div class="col">
+			<div class="col-md-12">
 				<ul class="footer-nesdis-links">
-					<li><a href="https://www.weather.gov/privacy" title="NOAA's Privacy Policy" id="anch_79">Privacy Policy</a></li>
-					<li><a href="http://www.noaa.gov/foia-freedom-of-information-act" title="Freedome of Information Act" id="anch_80">Freedom Of Information Act</a></li>
-					<li><a href="https://w1.weather.gov/glossary/" title="NWS Glossary" id="anch_80">NWS Glossary</a></li>
-					<li><a href="http://www.cio.noaa.gov/services_programs/info_quality.html" title="Information Quality" id="anch_81">Information Quality</a></li>
-					<li><a href="https://www.weather.gov/disclaimer" title="Disclaimer" id="anch_82">Disclaimer</a></li>
-					<li><a href="https://www.surveymonkey.com/r/6QTGJQF" title="Take Our Site Survey" id="anch_83">Take Our Survey</a></li>
-					<li><a href="http://www.commerce.gov/" title="United States Department of Commerce" id="anch_84">Department of Commerce</a></li>
-					<li><a href="http://www.noaa.gov" title="NOAA" id="anch_85">NOAA</a></li>
-					<li><a href="https://www.emc.ncep.noaa.gov/" title="EMC" id="anch_86">EMC</a></li>
+                                        <li><a href="https://www.weather.gov/privacy" title="NOAA's Privacy Policy" id="anch_79">Privacy Policy</a></li>
+                                        <li><a href="http://www.noaa.gov/foia-freedom-of-information-act" title="Freedome of Information Act" id="anch_80">Freedom Of Information Act</a></li>
+                                        <li><a href="https://w1.weather.gov/glossary/" title="NWS Glossary" id="anch_80">NWS Glossary</a></li>
+                                        <li><a href="http://www.cio.noaa.gov/services_programs/info_quality.html" title="Information Quality" id="anch_81">Information Quality</a></li>
+                                        <li><a href="https://www.weather.gov/disclaimer" title="Disclaimer" id="anch_82">Disclaimer</a></li>
+                                        <li><a href="https://www.surveymonkey.com/r/6QTGJQF" title="Take Our Site Survey" id="anch_83">Take Our Survey</a></li>
+                                        <li><a href="http://www.commerce.gov/" title="United States Department of Commerce" id="anch_84">Department of Commerce</a></li>
+                                        <li><a href="http://www.noaa.gov" title="NOAA" id="anch_85">NOAA</a></li>
+                                        <li><a href="https://www.emc.ncep.noaa.gov/" title="EMC" id="anch_86">EMC</a></li>
 				</ul>
 			</div>
 		</div>
 	<!--</div>-->
 	</div>	
 	</footer>
-<!-- 	</div> --><!-- Close wrapper -->	
+	
+</div><!-- Close wrapper -->	
 	<!-- Latest compiled and minified JavaScript -->
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script>
+$(document).ready(function () {
+
+  $('.first-button').on('click', function () {
+
+    $('.animated-icon1').toggleClass('open');
+  });
+  $('.second-button').on('click', function () {
+
+    $('.animated-icon2').toggleClass('open');
+  });
+  $('.third-button').on('click', function () {
+
+    $('.animated-icon3').toggleClass('open');
+  });
+});
+</script>
 </body>
 </html>
