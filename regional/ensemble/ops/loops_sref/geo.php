@@ -3,8 +3,8 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>GEFS Homepage</title>
-<link rel="stylesheet" type="text/css" href="main.css">
+<title>GEFS</title>
+<link rel="stylesheet" type="text/css" href="style.css">
 <script src="jquery-3.1.1.min.js"></script>
 <script type="text/javascript" src="functions.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,18 +16,18 @@
 
 <!-- Head element -->
 <div class="page-top">
-	<span><a style="color:#ffffff">SHORT RANGE ENSEMBLE FORECAST (SREF) VERIFICATION 
+	<span><a style="color:#ffffff">SHORT RANGE ENSEMBLE FORECAST SYSTEM (SREF) VERIFICATION 
                                         </a></span>
 </div>
 
 <!-- Top menu -->
 <div class="page-menu"><div class="table">
 	
-<!--        <div class="element">
+ <!--       <div class="element">
                 <span class="bold">Valid:</span>
                 <select id="validtime" onchange="changeValidtime(this.value);"></select>
-            </div> 
-
+        </div>
+-->
         <div class="element">
                 <span class="bold">Season:</span>
                 <select id="season" onchange="changeSeason(this.value)"></select>
@@ -45,43 +45,24 @@
                 <select id="level" onchange="changeLevel(this.value)"></select>
         </div>
 
--->
-
 <!-- /Top menu -->
 </div></div>
 
 <!-- Middle menu -->
-<!-- <div class="page-middle" id="page-middle"> -->
+<div class="page-middle" id="page-middle">
+Left/Right arrow keys = Change statistic | Up/Down arrow keys = Change level
+<br>For additional information on this image, <button class="infobutton" id="myBtn">click here</button>
+<div id="myModal" class="modal">
+  <div class="modal-content" style="font-size:130%;">
+    <span class="close">&times;</span>
+    Additional Image Information
+    <embed width=100% height=90% src="gefs_info.php">
+  </div>
+</div>
 <!-- /Middle menu -->
 </div>
 
-
 <div id="loading"><img style="width:100%" src="loading.png"></div>
-
-
-<body>
-<div id="pageContents">
-<center>
-<img src="../../../../style/images/ncep_logo.gif" alt="" wiidth="200" />
-<br>
-<br>
-The Short Range Ensemble Forecast (SREF) system was developed to provide a multi-regional model, short-range (0-3 days) ensemble prediction system to provide operationally relevant and useful guidance on the probability distribution of weather events.
-<br>
-<br>
-<a style="color:#ff0000">This webpage provides information on <u>operational SREF forecast skill </u><br>
-                          over CONUS in comparison to GEFS. Please use the links on the left to navigate to SREF verification statistics.</a> 
-<br>
-<br>
-<b>Additional Information:</b>
-<br>
-The SREF system began running operationally in May 2001.The operational SREF system is currently run four times per day (0300, 0900, 1500 and 2100 UTC) at 16-km resolution with 26 ensemble members. Forecasts are output at 1-h intervals from F000 to F039, and then at 3-h intervals out to F087, in various output grids including 16-km (grid 132), 32-km (grid 221) and 40-km (grid 212) grids  
-</center>
-</div>
-</body>
-
-
-
-
 
 <!-- Image -->
 <div id="page-map">
@@ -94,6 +75,32 @@ The SREF system began running operationally in May 2001.The operational SREF sys
 
 
 <script type="text/javascript">
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
 //====================================================================================================
 //User-defined variables
 //====================================================================================================
@@ -113,7 +120,7 @@ For X and Y, labeling one X or Y represents an integer (e.g. 0, 10, 20). Multipl
 format (e.g. XX = 00, 06, 12 --- XXX = 000, 006, 012).
 */
 
-var url = "https://www.emc.ncep.noaa.gov/gmb/yluo/naefs/VRFY_STATS/NCEP_NCEPb/DDDzLLL_VVV_SSS.gif";
+var url = "https://www.emc.ncep.noaa.gov/bzhou/verf_sref_gefs_4web/DDD_HGT_LLL_VVV_SSS.png";
 /* var url = "https://www.emc.ncep.noaa.gov/mmb/gmanikin/fv3gfs/20180301/fv3_DDD_VVV_2018030100_0Y.png"; */
 /*  var url = "https://www.emc.ncep.noaa.gov/users/Alicia.Bentley/fv3gefs/2018030100/images/DDD/mean_diff/VVV_Y.png"; */
 
@@ -126,119 +133,103 @@ var domains = [];
 var levels = [];
 var seasons = [];
 var maptypes = [];
-var validtimes = []; 
+var validtimes = [];
 
 
+variables.push({
+        displayName: "ANOM_CORR",
+        name: "ACC",
+});
 
-variables.push({
-        displayName: "ROC curve",
-        name: "roc",
-});
-variables.push({
-        displayName: "Economic Values",
-        name: "eval",
-});
-variables.push({
-        displayName: "Ranked Prob Skill Score",
-        name: "rpss",
-});
-variables.push({
-        displayName: "Brier Skill Score",
-        name: "bss",
-});
-variables.push({
-        displayName: "CRP Score",
-        name: "crp",
-});
-variables.push({
-        displayName: "CRP Skill Score",
-        name: "crps",
-});
+
 variables.push({
         displayName: "RMSE/Ensemble Spread",
-        name: "rms",
+        name: "RMSE_Spread",
 });
+
 variables.push({
-        displayName: "Mean/Absolute Error",
-        name: "err",
+        displayName: "Mean Error",
+        name: "ME",
 });
+
+
 variables.push({
-        displayName: "Anomaly Correlation",
-        name: "pac",
+        displayName: "Mean Absolute Error",
+        name: "MAE",
 });
+
 variables.push({
-        displayName: "Histogram Distrib.",
-        name: "his",
+        displayName: "CRPS",
+        name: "CRPS",
 });
+
+variables.push({
+        displayName: "BRIER SCORE (All thresholds)",
+        name: "BRIER",
+});
+
 
 
 
 domains.push({
-        displayName: "N. Hemisphere",
-        name: "nh",
+        displayName: "CONUS",
+        name: "CONUS",
 });
-domains.push({
-        displayName: "S. Hemisphere",
-        name: "sh",
-});
-domains.push({
-        displayName: "Tropics",
-        name: "tr",
-});
-
-
-
-
-
 
 
 levels.push({
-        displayName: "500 hPa",
-        name: "500",
+        displayName: "500mb",
+        name: "P500",
 });
+
 levels.push({
-        displayName: "1000 hPa",
-        name: "1000",
+        displayName: "700mb",
+        name: "P700",
+});
+
+seasons.push({
+        displayName: "Spring 2022",
+        name: "2022_Spring",
+});
+
+seasons.push({
+        displayName: "Winter 2021",
+        name: "2021_Winter",
+});
+
+
+seasons.push({
+        displayName: "Fall 2021",
+        name: "2021_Fall",
+});
+
+seasons.push({
+        displayName: "Summer 2021",
+        name: "2021_Summer",
+});
+
+seasons.push({
+        displayName: "Spring 2021",
+        name: "2021_Spring",
+});
+
+
+seasons.push({
+        displayName: "Winter 2020",
+        name: "2020_Winter",
+});
+
+
+seasons.push({
+        displayName: "Fall 2020",
+        name: "2020_Fall",
 });
 
 
 
-
 seasons.push({
-        displayName: "Spring 2019",
-        name: "spr2019",
-});
-seasons.push({
-        displayName: "Winter 2018/2019",
-        name: "win1819",
-});
-seasons.push({
-        displayName: "Fall 2018",
-        name: "fal2018",
-});
-seasons.push({
-        displayName: "Summer 2018",
-        name: "sum2018",
-});
-seasons.push({
-        displayName: "Spring 2018",
-        name: "spr2018",
-});
-seasons.push({
-        displayName: "Winter 2017/2018",
-        name: "win1718",
-});
-seasons.push({
-        displayName: "Fall 2017",
-        name: "fal2017",
-});
-seasons.push({
-        displayName: "Summer 2017",
-        name: "sum2017",
-});
-seasons.push({
-        displayName: "Spring 2017",
-        name: "spr2017",
+        displayName: "Summer 2020",
+        name: "2020_Summer",
 });
 
 
@@ -313,10 +304,10 @@ function initialize(){
 	
 	//Set image object based on default variables
 	imageObj = {
-		variable: "roc",
-		domain: "nh",
-		level: "500",
-                season: "spr2019",
+		variable: "ACC",
+		domain: "CONUS",
+		level: "P500",
+                season: "2022_Spring",
 //                validtime: "00Z",
 //                frame: startFrame,
 	};
@@ -343,7 +334,7 @@ function initialize(){
 	populateMenu('domain');
 	populateMenu('level');
 	populateMenu('season');
- //       populateMenu('validtime');
+//        populateMenu('validtime');
 	
 	//Populate the frames arrays
 	frames = [];
