@@ -94,28 +94,28 @@
     <div class="col-md-auto col-overlay-img">
 		<a class="img" href="global/">
 		  <div class="img__overlay">GFS<br/>GEFS<br/>NAEFS<br/>CFS</div>
-		  <img src="icon/global.png"/>
+		  <img src="style/images/icon/global.png"/>
 		</a>
 		<div class="img-label"><a class="img-model-icon-lnks" href="global/">Global Models</a></div>
 	</div>
 	<div class="col-md-auto col-overlay-img">
 		<a class="img" href="regional/">
 		  <div class="img__overlay">NAM<br/>NAM Nest<br>Hi-Res Windows<br>RAP HRRR<br>HREF SREF</div>
-		  <img src="icon/regional_hires.png"/>
+		  <img src="style/images/icon/regional_hires.png"/>
 		</a>
 		<div class="img-label"><a class="img-model-icon-lnks" href="regional/">Regional/Hi-Res Models</a></div>
 	</div>
 	<div class="col-md-auto col-overlay-img">
 		<a class="img" href="ocean_wave/">
 		  <div class="img__overlay">RTOFS<br>WAVEWATCH III</div>
-		  <img src="icon/ocean_wave.png"/>
+		  <img src="style/images/icon/ocean_wave.png"/>
 		</a>
 		<div class="img-label"><a class="img-model-icon-lnks" href="ocean_wave/">Ocean/Wave Models</a></div>
 	</div>
 	<div class="col-md-auto col-overlay-img">
 		<a class="img" href="analyses/">
 		  <div class="img__overlay">RTMA<br/>URMA</div>
-		  <img src="icon/realtime_anl.png"/>
+		  <img src="style/images/icon/realtime_anl.png"/>
 		</a>
 		<div class="img-label"><a class="img-model-icon-lnks" href="analyses/">Real-time Analyses</a></div>
 	</div>
@@ -127,21 +127,21 @@
     <div class="col-md-auto col-overlay-img">
 		<a class="img" href="cyclones/">
 		  <div class="img__overlay">HWRF<br>HMON<br>Tropical Cyclones<br>Extratropical<br>Cyclones</div>
-		  <img src="icon/cyclones.png"/>
+		  <img src="style/images/icon/cyclones.png"/>
 		</a>
 		<div class="img-label"><a class="img-model-icon-lnks" href="cyclones/">Cyclones</a></div>
 	</div>
 	<div class="col-md-auto col-overlay-img">
 		<a class="img" href="precip/">
 		  <div class="img__overlay">Precipitation<br/>Cloud Cover<br>(Multiple Models)</div>
-		  <img src="icon/precip_clouds.png"/>
+		  <img src="style/images/icon/precip_clouds.png"/>
 		</a>
 		<div class="img-label"><a class="img-model-icon-lnks" href="precip/">Precipitation/Clouds</a></div>
 	</div>
 	<div class="col-md-auto col-overlay-img">
 		<a class="img" href="air_quality/">
 		  <div class="img__overlay">CMAQ<br/>HYSPLIT<br/>NGAC</div>
-		  <img src="icon/air_quality.png"/>
+		  <img src="style/images/icon/air_quality.png"/>
 		</a>
 		<div class="img-label"><a class="img-model-icon-lnks" href="air_quality/">Air Quality</a></div>
 	</div>
