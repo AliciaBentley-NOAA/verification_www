@@ -1,0 +1,46 @@
+
+---------------------------------
+Anatomy of NCEP EMC VSDB Database 
+---------------------------------
+Fanglin Yang, NWS/NOAA/NCEP/EMC
+
+
+---------------------------------
+For Scalar variable, for instance
+---------------------------------
+V01 GFS 36 2016011400 GFS G2/NHX SAL1L2 T P850 =   3600.   0.176434607E+01   0.180782900E+01   0.251668589E+02   0.252372094E+02   0.261536586E+02
+ 
+V01 -- version 1. No real meaning
+GFS -- forecast model
+36  -- forecast hour, 
+2016011400 --  verification/validation time, 
+GFS -- analysis 
+G2/NHX  -- 2.5-deg grid over Northern Hemisphere 
+SAL1L2  -- scalar variable
+T -- Temperature
+P850 -- 850 hPa
+3600 -- number of points
+0.176434607E+01 -- forecasts mean (f) 
+0.180782900E+01 -- analysis mean  (a)
+0.251668589E+02  -- forecast*analysis f*a
+0.252372094E+02 -- forecast^2 (f*f)
+0.261536586E+02 -- analysis^2 (a*a)
+
+------------------------------
+For  Vector Wind, for instance
+------------------------------
+V01 GFS 360 2014112800 GFS G2/PNA VAL1L2 WIND P250 =   1311.   0.361918573E+00   0.451824065E+00   0.974048979E+00   0.281390634E+01  -0.344594241E+02   0.429293185E+03   0.536060212E+03
+
+.......
+WIND -- vector wind
+P250 -- 250 hPa
+1311 -- number of points
+0.361918573E+00 -- uf, forecat zonal wind
+0.451824065E+00 -- vf, forecast meridional wind
+0.974048979E+00 -- ua, analysis zonal wind
+0.281390634E+01 -- va analysis meridional wind
+-0.344594241E+02 --(uf*ua + vf*va )
+0.429293185E+03 -- (uf*uf + vf*vf)
+0.536060212E+03 -- (*ua*ua + va*va)
+
+
