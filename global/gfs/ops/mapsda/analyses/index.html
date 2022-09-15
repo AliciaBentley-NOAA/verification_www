@@ -1,0 +1,159 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>GFS Verification</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet" />
+<link href="../../../../../style/default.css" rel="stylesheet" type="text/css" media="all" />
+<link href="../../../../../style/fonts.css" rel="stylesheet" type="text/css" media="all" />
+<!--[if IE 6]><link href="default_ie6.css" rel="stylesheet" type="text/css" /><![endif]-->
+<style>
+        .dropdown-content {
+                 top: -80%;
+        }
+</style>
+</head>
+
+<script>
+function createDropdown(opt) {
+  /* When the user clicks on the button, 
+     toggle between hiding and showing the dropdown content */
+  document.getElementById(opt.nextElementSibling.id).classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  var oFrame = document.getElementById("body_frame");
+  oFrame.contentWindow.document.onclick = function() {
+        var i;
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+            }
+        }
+  };
+  if (!event.target.matches('.dropbtn')) {
+      var dropdowns = document.getElementsByClassName("dropdown-content");
+      var i;
+      for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+              openDropdown.classList.remove('show');
+          }
+      }
+  }
+  if (event.target.matches('.dropbtn')) {
+      var dropdowns = document.getElementsByClassName("dropdown-content");
+      var i;
+      for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (event.target.nextElementSibling.id != openDropdown.id) {
+              if (openDropdown.classList.contains('show')) {
+                  openDropdown.classList.remove('show');
+               }
+          }
+      }
+  }
+}
+</script>
+
+<body>
+<div id="page" class="container">
+	<div id="header">
+		<div id="logo">
+			<img src="../../../../../style/images/noaa.png" alt="" width="100" />
+			<img src="../../../../../style/images/nws.png" alt="" width="100" />
+			<h1><font color="white">Operational<br>GFS<br>Verification</font></h1>
+		</div>
+		<div id="menu">
+			<ul>
+                            <li><a href="../../" accesskey="1" title="">HOME</a></li>
+                            <div class="dropdown">
+                                <button onclick="createDropdown(this)" class="dropbtn" accesskey="2">GRID-TO-GRID<br>(GFS AND OTHER INTERNATIONAL MODELS) &rsaquo;&rsaquo;</button>
+                                     <div id="Dropdown_grid2grid_all_models" class="dropdown-content">
+                                         <a href="../../grid2grid_all_models/acc">ANOMALY CORRELATION COEFFICIENT</a>
+                                         <a href="../../grid2grid_all_models/bias">BIAS</a>
+                                         <a href="../../grid2grid_all_models/rmse">RMSE</a>
+                                         <a href="../../grid2grid_all_models/msess">MURPHY'S MSE SKILL SCORE</a>
+                                         <a href="../../grid2grid_all_models/rsd">RATIO OF STANDARD DEVIATION</a>
+                                         <a href="../../grid2grid_all_models/rmse_md">RMSE FROM MEAN DIFFERENCE</a>
+                                         <a href="../../grid2grid_all_models/rmse_pv">RMSE FROM PATTERN VARIATION</a>
+                                         <a href="../../grid2grid_all_models/acc_archive">MONTHLY ACC PLOT ARCHIVE</a>
+                                     </div>
+                            </div>
+                            <div class="dropdown">
+                                <button onclick="createDropdown(this)" class="dropbtn" accesskey="3">GRID-TO-GRID<br>(ALL GFS CYCLES) &rsaquo;&rsaquo;</button>
+                                     <div id="Dropdown_grid2grid_gfs_4cycles" class="dropdown-content">
+                                         <a href="../../grid2grid_gfs_4cycles/acc">ANOMALY CORRELATION COEFFICIENT</a>
+                                         <a href="../../grid2grid_gfs_4cycles/bias">BIAS</a>
+                                         <a href="../../grid2grid_gfs_4cycles/rmse">RMSE</a>
+                                         <a href="../../grid2grid_gfs_4cycles/msess">MURPHY'S MSE SKILL SCORE</a>
+                                         <a href="../../grid2grid_gfs_4cycles/rsd">RATIO OF STANDARD DEVIATION</a>
+                                         <a href="../../grid2grid_gfs_4cycles/rmse_md">RMSE FROM MEAN DIFFERENCE</a>
+                                         <a href="../../grid2grid_gfs_4cycles/rmse_pv">RMSE FROM PATTERN VARIATION</a>
+                                         <a href="../../grid2grid_gfs_4cycles/means">MEANS</a>
+                                     </div>
+                            </div>
+                            <div class="dropdown">
+                                <button onclick="createDropdown(this)" class="dropbtn" accesskey="4">GRID-TO-OBS &rsaquo;&rsaquo;</button>
+                                     <div id="Dropdown_grid2obs" class="dropdown-content">
+                                         <a href="../../grid2obs/bias">BIAS</a>
+                                         <a href="../../grid2obs/rmse">RMSE</a>
+                                     </div>
+                            </div>
+                            <div class="dropdown">
+                                <button onclick="createDropdown(this)" class="dropbtn" accesskey="5">MONTHLY<br>LONG TERM<br>STATISTICS &rsaquo;&rsaquo;</button>
+                                <div id="Dropdown_long_term" class="dropdown-content">
+                                    <a href="../../monthly_long_term/all_models">ALL MODELS</a>
+                                    <a href="../../monthly_long_term/gfs_ecmwf">GFS VS. ECMWF</a>
+                                    <a href="../../monthly_long_term/gfs_4cycles">GFS 4 CYCLES</a>
+                                    <a href="../../monthly_long_term/useful_fcst_days">USEFUL FORECAST DAYS</a>
+                                </div>
+                            </div>
+                            <li><a href="../../annual_long_term" accesskey="6" title="">ANNUAL<br>LONG TERM<br>STATISTICS</a></li>
+                            <li><a href="../../s1" accesskey="7" title="">S1 SCORES</a></li>
+                            <li><a href="../../tropical_cyclones" accesskey="8" title="">TROPICAL CYCLONES</a></li>
+                            <div class="dropdown">
+                                <button onclick="createDropdown(this)" class="dropbtn" id="active" accesskey="9">DA PLOTS &rsaquo;&rsaquo;</button>
+                                     <div id="Dropdown_mapsda" class="dropdown-content">
+                                         <a href="../analyses">ANALYSES</a>
+                                         <a href="../ensemble">ENSEMBLE</a>
+                                     </div>
+                            </div>
+                            <li><a href="https://www.emc.ncep.noaa.gov/data_assimilation/data.html" accesskey="10" title="">ASSIMILATION MONITORING</a></li>
+                            <li><a href="../../metviewer_metexpress_howto" accesskey="11" title="">CREATE GRAPHICS WITH METVIEWER AND METEXPRESS</a></li>
+                            <li><a href="https://www.emc.ncep.noaa.gov/users/verification/global" accesskey="12" title="">&lsaquo;&lsaquo; RETURN TO<br><u>GLOBAL MODELS</u><br>VERIFICATION</a></li>
+                            <li></li>
+                        </ul>
+		</div>
+	</div>
+	<div id="main">
+		<div id="banner">
+                    <iframe id="body_frame" src="analyses_TMP.php" width="1100" height="1100" style="border: 1px solid black;"></iframe>
+		</div>
+		<div id="welcome">
+			<p>This page displays verification for the operational Global Forecast System (GFS) at EMC.</p>
+                        <p>DISCLAIMER: This web page is not "operational" and therefore not subject to 24-hr monitoring by NCEP's Central Operations staff.</p>
+		</div>
+                <div id="contact">
+                	<p><br><b>CONTACT INFORMATION</b><br>Mallory.Row@noaa.gov - Webmaster, GFS Verification<br>Alicia.Bentley@noaa.gov - Global Model Verification<br>Geoffrey.Manikin@noaa.gov - Model Evaluation Group<br>Jason.Levit@noaa.gov - VPPPG Branch Chief 
+		</div>
+		<div id="footer">
+			<img src="../../../../../style/images/noaa.png" alt="" width="100" />
+			<img src="../../../../../style/images/nws.png" alt="" width="100" />
+			<img src="../../../../../style/images/commerce.png" alt="" width="100" />
+			<img src="../../../../../style/images/usagov.png" alt="" width="100" />
+			<br>
+			<a href="https://www.weather.gov/privacy">Privacy Policy</a> | <a href="https://www.weather.gov/disclaimer">Disclaimer</a> | <a href="https://www.commerce.gov">Department of Commerce</a> | <a href="https://www.noaa.gov">NOAA</a> | <a href="https://www.weather.gov">NWS</a> | <a href="https://www.ncep.noaa.gov">NCEP</a> | <a href="https://www.emc.ncep.noaa.gov">EMC</a>
+		</div>
+		<div id="copyright">
+		</div>
+	</div>
+</div>
+</body>
+</html>
