@@ -21,8 +21,8 @@
 	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
 	
 	<!--<link rel="stylesheet" href="emc.css" media="all">-->
-	<link rel="stylesheet" href="../../emc-footer.css" media="all">
-	<link rel="stylesheet" href="../../verif_update.css" media="all">
+	<link rel="stylesheet" href="../../style/emc-footer.css" media="all">
+	<link rel="stylesheet" href="../../style/verif_update.css" media="all">
 </head>
 
 <body>
@@ -41,46 +41,46 @@
 
 <div class="row justify-content-md-center">
     <div class="col-md-auto col-overlay-img">
-		<a class="img" href="https://www.emc.ncep.noaa.gov/users/verification/headlines/acc_31days/" target="_top">
+		<a class="img" href="../acc_31days/" target="_top">
 		  <div class="img__overlay">Global Models<br/>(Last 31 days)</div>
 		  <img src="https://www.emc.ncep.noaa.gov/users/verification/global/gfs/ops/grid2grid_all_models/images/acc_valid00Z_HGT_P500_fhr120_G002NHX.png"/>
 		</a>
-		<div class="img-label"><a class="img-model-icon-lnks" href="https://www.emc.ncep.noaa.gov/users/verification/headlines/acc_31days/" target="_top">Anomaly Correlation<br>Coefficient (Last 31 days)</a></div>
+		<div class="img-label"><a class="img-model-icon-lnks" href="../acc_31days/" target="_top">Anomaly Correlation<br>Coefficient (Last 31 days)</a></div>
 	</div>
 	<div class="col-md-auto col-overlay-img">
-                <a class="img" href="https://www.emc.ncep.noaa.gov/users/verification/headlines/acc_annual/" target="_top">
+                <a class="img" href="../acc_annual/" target="_top">
                   <div class="img__overlay">Global Models/<br/>GFS vs. ECMWF<br/>(1984–2021)</div>
                   <img src="https://emc.ncep.noaa.gov/users/verification/global/gfs/ops/annual_long_term/images/annual_all_models_acc_valid00Z_HGT_P500_fday5_G002NHX.png"/>
 		</a>
-		<div class="img-label"><a class="img-model-icon-lnks" href="https://www.emc.ncep.noaa.gov/users/verification/headlines/acc_annual/" target="_top">Anomaly Correlation<br>Coefficient (1984–2021)</a></div>
+		<div class="img-label"><a class="img-model-icon-lnks" href="../acc_annual/" target="_top">Anomaly Correlation<br>Coefficient (1984–2021)</a></div>
 	</div>
 	<div class="col-md-auto col-overlay-img">
-                <a class="img" href="https://www.emc.ncep.noaa.gov/users/verification/headlines/gfs_useful_day/" target="_top">
+                <a class="img" href="../gfs_useful_day/" target="_top">
 		  <div class="img__overlay">GFS Useful</br>Forecast Day<br/>(1989–2021)</div>
                   <img src="https://emc.ncep.noaa.gov/users/verification/global/gfs/ops/annual_long_term/images/annual_useful_fcst_days_acc06_gfs_valid00Z_HGT_P500_G002NHX.png"/>
 	        </a>
-		<div class="img-label"><a class="img-model-icon-lnks" href="https://www.emc.ncep.noaa.gov/users/verification/headlines/gfs_useful_day/" target="_top">GFS Useful Forecast<br>Day (1989–2021)</a></div>
+		<div class="img-label"><a class="img-model-icon-lnks" href="../gfs_useful_day/" target="_top">GFS Useful Forecast<br>Day (1989–2021)</a></div>
 	</div>
         <div class="col-md-auto col-overlay-img">
-                <a class="img" href="https://www.emc.ncep.noaa.gov/users/verification/headlines/acc_dieoff/" target="_top">
+                <a class="img" href="../acc_dieoff/" target="_top">
                   <div class="img__overlay">GFS vs. GEFS</br>vs. NAEFS<br/>(1/1/21–12/31/21)</div>
                   <img src="https://www.emc.ncep.noaa.gov/users/verification/headlines/acc_dieoff/NH_H500_PAC_2021.png"/>
                 </a>
-                <div class="img-label"><a class="img-model-icon-lnks" href="https://www.emc.ncep.noaa.gov/users/verification/headlines/acc_dieoff/" target="_top">ACC Score Die-off Plot<br>(1/1/21–12/31/21)</a></div>
+                <div class="img-label"><a class="img-model-icon-lnks" href="../acc_dieoff/" target="_top">ACC Score Die-off Plot<br>(1/1/21–12/31/21)</a></div>
         </div>
         <div class="col-md-auto col-overlay-img">
-                <a class="img" href="https://www.emc.ncep.noaa.gov/users/verification/headlines/gfs_precip/" target="_top">
+                <a class="img" href="../gfs_precip/" target="_top">
                   <div class="img__overlay">GFS</br>Precipitation</br>Scores<br/>(2002–2021)</div>
                   <img src="https://www.emc.ncep.noaa.gov/users/verification/headlines/gfs_precip/annual_gfs_precip_fss_10mm.png"/>
                 </a>
-                <div class="img-label"><a class="img-model-icon-lnks" href="https://www.emc.ncep.noaa.gov/users/verification/headlines/gfs_precip/" target="_top">GFS Precipitation<br>Scores (2002–2021)</a></div>
+                <div class="img-label"><a class="img-model-icon-lnks" href="../gfs_precip/" target="_top">GFS Precipitation<br>Scores (2002–2021)</a></div>
         </div>
         <div class="col-md-auto col-overlay-img">
-                <a class="img" href="https://www.emc.ncep.noaa.gov/users/verification/headlines/gefs_precip/" target="_top">
+                <a class="img" href="../gefs_precip/" target="_top">
                   <div class="img__overlay">GEFS</br>Precipitation</br>Scores<br/>(2014–2021)</div>
                   <img src="https://www.emc.ncep.noaa.gov/users/verification/headlines/gefs_precip/GEFS_CONUS_PRCP_BSS_10mm_2lines.png"/>
                 </a>
-                <div class="img-label"><a class="img-model-icon-lnks" href="https://www.emc.ncep.noaa.gov/users/verification/headlines/gefs_precip/" target="_top">GEFS Precipitation<br>Scores (2014–2021)</a></div>
+                <div class="img-label"><a class="img-model-icon-lnks" href="../gefs_precip/" target="_top">GEFS Precipitation<br>Scores (2014–2021)</a></div>
         </div>
 </div>
 
